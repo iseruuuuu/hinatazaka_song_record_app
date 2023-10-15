@@ -23,9 +23,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.13.1
+  flutter_dotenv: ^5.1.0
+  supabase_flutter: ^1.10.21
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env
 
 flutter_icons:
   android: true

@@ -3,17 +3,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 class Preference {
   final preference = SharedPreferences.getInstance();
 
-  Future<void> setStringList(List<String> value) async {
+  Future<void> setStringList(List<String> value, String key) async {
     final pref = await preference;
-
-    //TODO
-
-    await pref.setStringList('count', value);
+    await pref.setStringList(key, value);
   }
 
-  Future<List<String>> getStringList() async {
+  Future<List<String>> getStringList(String key) async {
     final pref = await preference;
-    final value = pref.getStringList('count') ?? [];
+    final value = pref.getStringList(key) ?? [];
     return value;
   }
 }
