@@ -26,6 +26,7 @@ class LiveScreenViewModel extends _$LiveScreenViewModel {
       state = state.copyWith(
         list: list.map(int.parse).toList(),
       );
+      count = list.map(int.parse).toList();
     }
   }
 
