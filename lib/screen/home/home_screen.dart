@@ -11,17 +11,13 @@ class HomeScreen extends ConsumerWidget {
     final state = ref.watch(homeScreenViewModelProvider());
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: PreferredSize(
-        preferredSize: Size.zero,
-        child: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-        ),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
       body: state.songList.isNotEmpty
           ? ListView.builder(
               itemCount: song.length,
-              reverse: true,
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(song[index]),

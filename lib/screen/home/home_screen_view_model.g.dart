@@ -7,7 +7,7 @@ part of 'home_screen_view_model.dart';
 // **************************************************************************
 
 String _$homeScreenViewModelHash() =>
-    r'77b62bf1aa92c0d70d3febd76b4518de6806b355';
+    r'b6f8250bbbba0edb7f73f7b550d1236f677a496b';
 
 /// Copied from Dart SDK
 class _SystemHash {
