@@ -6,6 +6,7 @@ part 'live_screen_view_model.g.dart';
 
 @riverpod
 class LiveScreenViewModel extends _$LiveScreenViewModel {
+  @override
   LiveScreenState build({
     LiveScreenState initState = const LiveScreenState(),
   }) {

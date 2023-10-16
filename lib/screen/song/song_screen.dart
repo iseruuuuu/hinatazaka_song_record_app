@@ -27,12 +27,12 @@ class SongScreen extends ConsumerWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CircleAvatar(
-                          backgroundColor: Color(0xFF00CCFF),
+                          backgroundColor: const Color(0xFF00CCFF),
                           child: IconButton(
                             onPressed: () => ref
                                 .read(songScreenViewModelProvider().notifier)
                                 .decrement(index),
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.remove,
                               color: Colors.white,
                             ),
@@ -46,12 +46,12 @@ class SongScreen extends ConsumerWidget {
                           ),
                         ),
                         CircleAvatar(
-                          backgroundColor: Color(0xFF00CCFF),
+                          backgroundColor: const Color(0xFF00CCFF),
                           child: IconButton(
                             onPressed: () => ref
                                 .read(songScreenViewModelProvider().notifier)
                                 .increment(index),
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.add,
                               color: Colors.white,
                             ),
@@ -63,7 +63,7 @@ class SongScreen extends ConsumerWidget {
                 );
               },
             )
-          : Center(
+          : const Center(
               child: CircularProgressIndicator(),
             ),
     );

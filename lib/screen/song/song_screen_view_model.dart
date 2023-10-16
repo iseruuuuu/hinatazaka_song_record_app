@@ -6,6 +6,7 @@ part 'song_screen_view_model.g.dart';
 
 @riverpod
 class SongScreenViewModel extends _$SongScreenViewModel {
+  @override
   SongScreenState build({
     SongScreenState initState = const SongScreenState(),
   }) {

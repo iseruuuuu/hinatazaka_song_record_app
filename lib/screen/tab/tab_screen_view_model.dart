@@ -9,6 +9,7 @@ part 'tab_screen_view_model.g.dart';
 
 @riverpod
 class TabScreenViewModel extends _$TabScreenViewModel {
+  @override
   TabScreenState build({
     TabScreenState initState = const TabScreenState(),
   }) {

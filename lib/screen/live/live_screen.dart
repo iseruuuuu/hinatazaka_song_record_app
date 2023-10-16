@@ -27,7 +27,7 @@ class LiveScreen extends ConsumerWidget {
               return ListTile(
                 title: Text(
                   places[index]['name'],
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -38,14 +38,14 @@ class LiveScreen extends ConsumerWidget {
                   children: [
                     Text(
                       places[index]['place'],
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 18,
                       ),
                     ),
                     Text(
                       places[index]['created_at'],
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.grey,
                         fontSize: 18,
                       ),
