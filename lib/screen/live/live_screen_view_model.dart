@@ -15,7 +15,7 @@ class LiveScreenViewModel extends _$LiveScreenViewModel {
 
   List<int> count = [];
 
-  void loadPreference() async {
+  Future<void> loadPreference() async {
     final list = await Preference().getStringList('live');
     if (list.isEmpty) {
       state = state.copyWith(
@@ -46,7 +46,7 @@ class LiveScreenViewModel extends _$LiveScreenViewModel {
     storePreference(count);
   }
 
-  void storePreference(List<int> count) async {
+  Future<void> storePreference(List<int> count) async {
     final list = count.map((e) => e.toString()).toList();
     await Preference().setStringList(list, 'live');
   }

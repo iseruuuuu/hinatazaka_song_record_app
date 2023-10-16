@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'home_screen_state.dart';
+part of 'song_screen_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,27 +15,27 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$HomeScreenState {
+mixin _$SongScreenState {
   List<int> get songList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HomeScreenStateCopyWith<HomeScreenState> get copyWith =>
+  $SongScreenStateCopyWith<SongScreenState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HomeScreenStateCopyWith<$Res> {
-  factory $HomeScreenStateCopyWith(
-          HomeScreenState value, $Res Function(HomeScreenState) then) =
-      _$HomeScreenStateCopyWithImpl<$Res, HomeScreenState>;
+abstract class $SongScreenStateCopyWith<$Res> {
+  factory $SongScreenStateCopyWith(
+          SongScreenState value, $Res Function(SongScreenState) then) =
+      _$SongScreenStateCopyWithImpl<$Res, SongScreenState>;
   @useResult
   $Res call({List<int> songList});
 }
 
 /// @nodoc
-class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
-    implements $HomeScreenStateCopyWith<$Res> {
-  _$HomeScreenStateCopyWithImpl(this._value, this._then);
+class _$SongScreenStateCopyWithImpl<$Res, $Val extends SongScreenState>
+    implements $SongScreenStateCopyWith<$Res> {
+  _$SongScreenStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -57,22 +57,22 @@ class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
 }
 
 /// @nodoc
-abstract class _$$HomeScreenStateImplCopyWith<$Res>
-    implements $HomeScreenStateCopyWith<$Res> {
-  factory _$$HomeScreenStateImplCopyWith(_$HomeScreenStateImpl value,
-          $Res Function(_$HomeScreenStateImpl) then) =
-      __$$HomeScreenStateImplCopyWithImpl<$Res>;
+abstract class _$$SongScreenStateImplCopyWith<$Res>
+    implements $SongScreenStateCopyWith<$Res> {
+  factory _$$SongScreenStateImplCopyWith(_$SongScreenStateImpl value,
+          $Res Function(_$SongScreenStateImpl) then) =
+      __$$SongScreenStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<int> songList});
 }
 
 /// @nodoc
-class __$$HomeScreenStateImplCopyWithImpl<$Res>
-    extends _$HomeScreenStateCopyWithImpl<$Res, _$HomeScreenStateImpl>
-    implements _$$HomeScreenStateImplCopyWith<$Res> {
-  __$$HomeScreenStateImplCopyWithImpl(
-      _$HomeScreenStateImpl _value, $Res Function(_$HomeScreenStateImpl) _then)
+class __$$SongScreenStateImplCopyWithImpl<$Res>
+    extends _$SongScreenStateCopyWithImpl<$Res, _$SongScreenStateImpl>
+    implements _$$SongScreenStateImplCopyWith<$Res> {
+  __$$SongScreenStateImplCopyWithImpl(
+      _$SongScreenStateImpl _value, $Res Function(_$SongScreenStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -80,7 +80,7 @@ class __$$HomeScreenStateImplCopyWithImpl<$Res>
   $Res call({
     Object? songList = null,
   }) {
-    return _then(_$HomeScreenStateImpl(
+    return _then(_$SongScreenStateImpl(
       songList: null == songList
           ? _value._songList
           : songList // ignore: cast_nullable_to_non_nullable
@@ -91,8 +91,8 @@ class __$$HomeScreenStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$HomeScreenStateImpl implements _HomeScreenState {
-  const _$HomeScreenStateImpl({final List<int> songList = const []})
+class _$SongScreenStateImpl implements _SongScreenState {
+  const _$SongScreenStateImpl({final List<int> songList = const []})
       : _songList = songList;
 
   final List<int> _songList;
@@ -106,14 +106,14 @@ class _$HomeScreenStateImpl implements _HomeScreenState {
 
   @override
   String toString() {
-    return 'HomeScreenState(songList: $songList)';
+    return 'SongScreenState(songList: $songList)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$HomeScreenStateImpl &&
+            other is _$SongScreenStateImpl &&
             const DeepCollectionEquality().equals(other._songList, _songList));
   }
 
@@ -124,19 +124,19 @@ class _$HomeScreenStateImpl implements _HomeScreenState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$HomeScreenStateImplCopyWith<_$HomeScreenStateImpl> get copyWith =>
-      __$$HomeScreenStateImplCopyWithImpl<_$HomeScreenStateImpl>(
+  _$$SongScreenStateImplCopyWith<_$SongScreenStateImpl> get copyWith =>
+      __$$SongScreenStateImplCopyWithImpl<_$SongScreenStateImpl>(
           this, _$identity);
 }
 
-abstract class _HomeScreenState implements HomeScreenState {
-  const factory _HomeScreenState({final List<int> songList}) =
-      _$HomeScreenStateImpl;
+abstract class _SongScreenState implements SongScreenState {
+  const factory _SongScreenState({final List<int> songList}) =
+      _$SongScreenStateImpl;
 
   @override
   List<int> get songList;
   @override
   @JsonKey(ignore: true)
-  _$$HomeScreenStateImplCopyWith<_$HomeScreenStateImpl> get copyWith =>
+  _$$SongScreenStateImplCopyWith<_$SongScreenStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

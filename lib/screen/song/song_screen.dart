@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hinatazaka_song_record_app/constants/song.dart';
-import 'package:hinatazaka_song_record_app/screen/home/home_screen_view_model.dart';
+import 'package:hinatazaka_song_record_app/screen/song/song_screen_view_model.dart';
 
-class HomeScreen extends ConsumerWidget {
-  const HomeScreen({super.key});
+class SongScreen extends ConsumerWidget {
+  const SongScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(homeScreenViewModelProvider());
+    final state = ref.watch(songScreenViewModelProvider());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -30,7 +30,7 @@ class HomeScreen extends ConsumerWidget {
                           backgroundColor: Color(0xFF00CCFF),
                           child: IconButton(
                             onPressed: () => ref
-                                .read(homeScreenViewModelProvider().notifier)
+                                .read(songScreenViewModelProvider().notifier)
                                 .decrement(index),
                             icon: Icon(
                               Icons.remove,
@@ -49,7 +49,7 @@ class HomeScreen extends ConsumerWidget {
                           backgroundColor: Color(0xFF00CCFF),
                           child: IconButton(
                             onPressed: () => ref
-                                .read(homeScreenViewModelProvider().notifier)
+                                .read(songScreenViewModelProvider().notifier)
                                 .increment(index),
                             icon: Icon(
                               Icons.add,
@@ -63,7 +63,6 @@ class HomeScreen extends ConsumerWidget {
                 );
               },
             )
-          //TODO　最初の読み込みだからSplach画面でもいいかも
           : Center(
               child: CircularProgressIndicator(),
             ),

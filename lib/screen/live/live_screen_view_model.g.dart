@@ -7,7 +7,7 @@ part of 'live_screen_view_model.dart';
 // **************************************************************************
 
 String _$liveScreenViewModelHash() =>
-    r'2ace09c76151f72139f980e8efac5bf2786b9949';
+    r'b586a02e0657493948653c6c18a93975b6e9e504';
 
 /// Copied from Dart SDK
 class _SystemHash {

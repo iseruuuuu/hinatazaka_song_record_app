@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_screen_view_model.dart';
+part of 'song_screen_view_model.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$homeScreenViewModelHash() =>
-    r'b6f8250bbbba0edb7f73f7b550d1236f677a496b';
+String _$songScreenViewModelHash() =>
+    r'bc4aadd41025c9ded8fe5b2ce8fee4daa44d9cb4';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -30,36 +30,36 @@ class _SystemHash {
   }
 }
 
-abstract class _$HomeScreenViewModel
-    extends BuildlessAutoDisposeNotifier<HomeScreenState> {
-  late final HomeScreenState initState;
+abstract class _$SongScreenViewModel
+    extends BuildlessAutoDisposeNotifier<SongScreenState> {
+  late final SongScreenState initState;
 
-  HomeScreenState build({
-    HomeScreenState initState = const HomeScreenState(),
+  SongScreenState build({
+    SongScreenState initState = const SongScreenState(),
   });
 }
 
-/// See also [HomeScreenViewModel].
-@ProviderFor(HomeScreenViewModel)
-const homeScreenViewModelProvider = HomeScreenViewModelFamily();
+/// See also [SongScreenViewModel].
+@ProviderFor(SongScreenViewModel)
+const songScreenViewModelProvider = SongScreenViewModelFamily();
 
-/// See also [HomeScreenViewModel].
-class HomeScreenViewModelFamily extends Family<HomeScreenState> {
-  /// See also [HomeScreenViewModel].
-  const HomeScreenViewModelFamily();
+/// See also [SongScreenViewModel].
+class SongScreenViewModelFamily extends Family<SongScreenState> {
+  /// See also [SongScreenViewModel].
+  const SongScreenViewModelFamily();
 
-  /// See also [HomeScreenViewModel].
-  HomeScreenViewModelProvider call({
-    HomeScreenState initState = const HomeScreenState(),
+  /// See also [SongScreenViewModel].
+  SongScreenViewModelProvider call({
+    SongScreenState initState = const SongScreenState(),
   }) {
-    return HomeScreenViewModelProvider(
+    return SongScreenViewModelProvider(
       initState: initState,
     );
   }
 
   @override
-  HomeScreenViewModelProvider getProviderOverride(
-    covariant HomeScreenViewModelProvider provider,
+  SongScreenViewModelProvider getProviderOverride(
+    covariant SongScreenViewModelProvider provider,
   ) {
     return call(
       initState: provider.initState,
@@ -78,30 +78,30 @@ class HomeScreenViewModelFamily extends Family<HomeScreenState> {
       _allTransitiveDependencies;
 
   @override
-  String? get name => r'homeScreenViewModelProvider';
+  String? get name => r'songScreenViewModelProvider';
 }
 
-/// See also [HomeScreenViewModel].
-class HomeScreenViewModelProvider extends AutoDisposeNotifierProviderImpl<
-    HomeScreenViewModel, HomeScreenState> {
-  /// See also [HomeScreenViewModel].
-  HomeScreenViewModelProvider({
-    HomeScreenState initState = const HomeScreenState(),
+/// See also [SongScreenViewModel].
+class SongScreenViewModelProvider extends AutoDisposeNotifierProviderImpl<
+    SongScreenViewModel, SongScreenState> {
+  /// See also [SongScreenViewModel].
+  SongScreenViewModelProvider({
+    SongScreenState initState = const SongScreenState(),
   }) : this._internal(
-          () => HomeScreenViewModel()..initState = initState,
-          from: homeScreenViewModelProvider,
-          name: r'homeScreenViewModelProvider',
+          () => SongScreenViewModel()..initState = initState,
+          from: songScreenViewModelProvider,
+          name: r'songScreenViewModelProvider',
           debugGetCreateSourceHash:
               const bool.fromEnvironment('dart.vm.product')
                   ? null
-                  : _$homeScreenViewModelHash,
-          dependencies: HomeScreenViewModelFamily._dependencies,
+                  : _$songScreenViewModelHash,
+          dependencies: SongScreenViewModelFamily._dependencies,
           allTransitiveDependencies:
-              HomeScreenViewModelFamily._allTransitiveDependencies,
+              SongScreenViewModelFamily._allTransitiveDependencies,
           initState: initState,
         );
 
-  HomeScreenViewModelProvider._internal(
+  SongScreenViewModelProvider._internal(
     super._createNotifier, {
     required super.name,
     required super.dependencies,
@@ -111,11 +111,11 @@ class HomeScreenViewModelProvider extends AutoDisposeNotifierProviderImpl<
     required this.initState,
   }) : super.internal();
 
-  final HomeScreenState initState;
+  final SongScreenState initState;
 
   @override
-  HomeScreenState runNotifierBuild(
-    covariant HomeScreenViewModel notifier,
+  SongScreenState runNotifierBuild(
+    covariant SongScreenViewModel notifier,
   ) {
     return notifier.build(
       initState: initState,
@@ -123,10 +123,10 @@ class HomeScreenViewModelProvider extends AutoDisposeNotifierProviderImpl<
   }
 
   @override
-  Override overrideWith(HomeScreenViewModel Function() create) {
+  Override overrideWith(SongScreenViewModel Function() create) {
     return ProviderOverride(
       origin: this,
-      override: HomeScreenViewModelProvider._internal(
+      override: SongScreenViewModelProvider._internal(
         () => create()..initState = initState,
         from: from,
         name: null,
@@ -139,14 +139,14 @@ class HomeScreenViewModelProvider extends AutoDisposeNotifierProviderImpl<
   }
 
   @override
-  AutoDisposeNotifierProviderElement<HomeScreenViewModel, HomeScreenState>
+  AutoDisposeNotifierProviderElement<SongScreenViewModel, SongScreenState>
       createElement() {
-    return _HomeScreenViewModelProviderElement(this);
+    return _SongScreenViewModelProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is HomeScreenViewModelProvider && other.initState == initState;
+    return other is SongScreenViewModelProvider && other.initState == initState;
   }
 
   @override
@@ -158,20 +158,20 @@ class HomeScreenViewModelProvider extends AutoDisposeNotifierProviderImpl<
   }
 }
 
-mixin HomeScreenViewModelRef
-    on AutoDisposeNotifierProviderRef<HomeScreenState> {
+mixin SongScreenViewModelRef
+    on AutoDisposeNotifierProviderRef<SongScreenState> {
   /// The parameter `initState` of this provider.
-  HomeScreenState get initState;
+  SongScreenState get initState;
 }
 
-class _HomeScreenViewModelProviderElement
-    extends AutoDisposeNotifierProviderElement<HomeScreenViewModel,
-        HomeScreenState> with HomeScreenViewModelRef {
-  _HomeScreenViewModelProviderElement(super.provider);
+class _SongScreenViewModelProviderElement
+    extends AutoDisposeNotifierProviderElement<SongScreenViewModel,
+        SongScreenState> with SongScreenViewModelRef {
+  _SongScreenViewModelProviderElement(super.provider);
 
   @override
-  HomeScreenState get initState =>
-      (origin as HomeScreenViewModelProvider).initState;
+  SongScreenState get initState =>
+      (origin as SongScreenViewModelProvider).initState;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

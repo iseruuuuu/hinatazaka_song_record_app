@@ -1,13 +1,13 @@
 import 'package:hinatazaka_song_record_app/preference/preference.dart';
-import 'package:hinatazaka_song_record_app/screen/home/home_screen_state.dart';
+import 'package:hinatazaka_song_record_app/screen/song/song_screen_state.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'home_screen_view_model.g.dart';
+part 'song_screen_view_model.g.dart';
 
 @riverpod
-class HomeScreenViewModel extends _$HomeScreenViewModel {
-  HomeScreenState build({
-    HomeScreenState initState = const HomeScreenState(),
+class SongScreenViewModel extends _$SongScreenViewModel {
+  SongScreenState build({
+    SongScreenState initState = const SongScreenState(),
   }) {
     loadPreference();
     return initState;
@@ -15,7 +15,7 @@ class HomeScreenViewModel extends _$HomeScreenViewModel {
 
   List<int> count = [];
 
-  void loadPreference() async {
+  Future<void> loadPreference() async {
     final list = await Preference().getStringList('count');
     if (list.isEmpty) {
       state = state.copyWith(
@@ -48,7 +48,7 @@ class HomeScreenViewModel extends _$HomeScreenViewModel {
     }
   }
 
-  void storePreference(List<int> count) async {
+  Future<void> storePreference(List<int> count) async {
     final list = count.map((e) => e.toString()).toList();
     await Preference().setStringList(list, 'count');
   }

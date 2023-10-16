@@ -16,8 +16,8 @@ class TabScreen extends ConsumerWidget {
         decoration: const BoxDecoration(
           border: Border(
             top: BorderSide(
-              width: 1,
-              color: Colors.black,
+              width: 2,
+              color: Colors.lightBlueAccent,
             ),
           ),
         ),
@@ -36,7 +36,7 @@ class TabScreen extends ConsumerWidget {
               icon: Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Icon(
-                  Icons.home,
+                  Icons.music_note,
                   size: 35,
                 ),
               ),
@@ -46,7 +46,7 @@ class TabScreen extends ConsumerWidget {
               icon: Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Icon(
-                  Icons.account_circle,
+                  Icons.map,
                   size: 35,
                 ),
               ),
@@ -56,7 +56,7 @@ class TabScreen extends ConsumerWidget {
               icon: Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Icon(
-                  Icons.account_circle,
+                  Icons.live_tv,
                   size: 35,
                 ),
               ),
