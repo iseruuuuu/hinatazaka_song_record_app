@@ -30,8 +30,6 @@ class HomeScreenViewModel extends _$HomeScreenViewModel {
     }
   }
 
-  //TODO incrementとdecrementができていない
-
   void increment(int index) {
     count[index]++;
     state = state.copyWith(
