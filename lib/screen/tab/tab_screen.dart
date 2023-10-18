@@ -18,6 +18,7 @@ class TabScreen extends ConsumerWidget {
         iconSize: 15,
         selectedFontSize: 15,
         unselectedFontSize: 15,
+        selectedItemColor: const Color(0xFF00CCFF),
         type: BottomNavigationBarType.fixed,
         currentIndex: state.selectedIndex,
         onTap: controller.onTap,
