@@ -28,6 +28,9 @@ class MapUtils {
         Marker(
           markerId: MarkerId('marker_$i'),
           position: uniqueLocations[i],
+          onTap: () {
+            print(uniqueLocations[i]);
+          },
         ),
       );
     }

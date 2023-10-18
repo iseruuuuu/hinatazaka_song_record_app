@@ -12,6 +12,16 @@ class LiveScreen extends ConsumerWidget {
     final stream =
         Supabase.instance.client.from('place').stream(primaryKey: ['id']);
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF00CCFF),
+        elevation: 0,
+        title: const Text(
+          'ライブ会場一覧',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: StreamBuilder<List<Map<String, dynamic>>>(
         stream: stream,
         builder: (context, snapshot) {
@@ -37,7 +47,7 @@ class LiveScreen extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      places[index]['place'],
+                      'in ${places[index]['place']}',
                       style: const TextStyle(
                         color: Colors.black,
                         fontSize: 18,
@@ -56,6 +66,12 @@ class LiveScreen extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
+                      style: TextButton.styleFrom(
+                        side: const BorderSide(
+                          color: Color(0xFF00CCFF),
+                          width: 2,
+                        ),
+                      ),
                       onPressed: () {
                         state.list[index] == 0
                             ? ref

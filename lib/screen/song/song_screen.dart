@@ -12,15 +12,25 @@ class SongScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFF00CCFF),
         elevation: 0,
+        title: const Text(
+          '曲一覧',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       body: state.songList.isNotEmpty
           ? ListView.builder(
               itemCount: song.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(song[index]),
+                  title: Text(
+                    song[index],
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
                   trailing: SizedBox(
                     width: MediaQuery.of(context).size.width / 3,
                     child: Row(
