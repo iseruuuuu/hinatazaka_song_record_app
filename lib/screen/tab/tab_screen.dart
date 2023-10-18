@@ -11,59 +11,48 @@ class TabScreen extends ConsumerWidget {
     final controller = ref.watch(tabScreenViewModelProvider().notifier);
     return Scaffold(
       body: controller.pageList[state.selectedIndex],
-      bottomNavigationBar: Container(
-        width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-          border: Border(
-            top: BorderSide(
-              width: 2,
-              color: Colors.lightBlueAccent,
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        unselectedItemColor: Colors.grey,
+        iconSize: 15,
+        selectedFontSize: 15,
+        unselectedFontSize: 15,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: state.selectedIndex,
+        onTap: controller.onTap,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Icon(
+                Icons.music_note,
+                size: 35,
+              ),
             ),
+            label: '曲一覧',
           ),
-        ),
-        child: BottomNavigationBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          unselectedItemColor: Colors.grey,
-          iconSize: 30,
-          selectedFontSize: 0,
-          unselectedFontSize: 0,
-          type: BottomNavigationBarType.fixed,
-          currentIndex: state.selectedIndex,
-          onTap: controller.onTap,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(top: 10),
-                child: Icon(
-                  Icons.music_note,
-                  size: 35,
-                ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Icon(
+                Icons.map,
+                size: 35,
               ),
-              label: '',
             ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(top: 10),
-                child: Icon(
-                  Icons.map,
-                  size: 35,
-                ),
+            label: 'マップ',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Icon(
+                Icons.live_tv,
+                size: 35,
               ),
-              label: '',
             ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(top: 10),
-                child: Icon(
-                  Icons.live_tv,
-                  size: 35,
-                ),
-              ),
-              label: '',
-            ),
-          ],
-        ),
+            label: '会場一覧',
+          ),
+        ],
       ),
     );
   }

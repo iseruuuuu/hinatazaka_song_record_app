@@ -3,11 +3,21 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hinatazaka_song_record_app/constants/song.dart';
 import 'package:hinatazaka_song_record_app/screen/song/song_screen_view_model.dart';
 
-class SongScreen extends ConsumerWidget {
+class SongScreen extends ConsumerStatefulWidget {
   const SongScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  SongScreenState createState() => SongScreenState();
+}
+
+class SongScreenState extends ConsumerState<SongScreen>
+    with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
+
+  @override
+  Widget build(BuildContext context) {
+    super.build(context);
     final state = ref.watch(songScreenViewModelProvider());
     return Scaffold(
       backgroundColor: Colors.white,
