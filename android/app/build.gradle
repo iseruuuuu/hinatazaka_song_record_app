@@ -61,7 +61,7 @@ android {
 
     defaultConfig {
         applicationId "com.hinatazaka_song_record_app"
-        minSdkVersion 21
+        minSdkVersion 20
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName

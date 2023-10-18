@@ -1,14 +1,39 @@
-//これまでのライブ会場を記録する
-//行ったことがあるものを赤い色
-//行ったことがないものを青色
-
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:hinatazaka_song_record_app/utils/map_utils.dart';
 
 class MapScreen extends StatelessWidget {
   const MapScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: FutureBuilder<Set<Marker>>(
+        future: MapUtils().createMarker(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.hasError) {
+              return Center(child: Text('Error: ${snapshot.error}'));
+            }
+            return GoogleMap(
+              markers: snapshot.data!,
+              onMapCreated: (GoogleMapController controller) {
+                late GoogleMapController mapController;
+                mapController = controller;
+              },
+              initialCameraPosition: const CameraPosition(
+                // 見た目で中心あたりに設定
+                target: LatLng(39, 137.5),
+                zoom: 5,
+              ),
+            );
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
+      ),
+    );
   }
 }
