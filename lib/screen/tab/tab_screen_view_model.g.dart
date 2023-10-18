@@ -7,7 +7,7 @@ part of 'tab_screen_view_model.dart';
 // **************************************************************************
 
 String _$tabScreenViewModelHash() =>
-    r'10d846c64d750e4d8e26c3175d4658a4b5ba8a3b';
+    r'03612cf6981cdbc7cbfcc1dcce3163b66f29817b';
 
 /// Copied from Dart SDK
 class _SystemHash {

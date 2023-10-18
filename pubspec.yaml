@@ -22,6 +22,7 @@ dev_dependencies:
   custom_lint: ^0.5.3
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
+  flutter_native_splash: ^2.1.3+1
   flutter_test:
     sdk: flutter
   freezed: ^2.3.2
@@ -32,6 +33,19 @@ flutter:
   uses-material-design: true
   assets:
     - .env
+
+flutter_native_splash:
+  color: '#00CCFF'
+  image: 'assets/icon/icon.png'
+  color_dark: '#DBEBFF'
+  image_dark: 'assets/icon/icon.png'
+  fullscreen: true
+  android_12:
+    icon_background_color: '#00CCFF'
+    image: 'assets/icon/icon.png'
+    icon_background_color_dark: '#00CCFF'
+    image_dark: 'assets/icon/icon.png'
+
 
 flutter_icons:
   android: true

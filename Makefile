@@ -6,7 +6,6 @@ setup:
 .PHONY: generate
 generate:
 	fvm flutter pub get
-	fvm flutter gen-l10n
 	fvm flutter pub run flutter_launcher_icons
 	dart run flutter_native_splash:create
 

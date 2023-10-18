@@ -7,7 +7,7 @@ part of 'song_screen_view_model.dart';
 // **************************************************************************
 
 String _$songScreenViewModelHash() =>
-    r'bc4aadd41025c9ded8fe5b2ce8fee4daa44d9cb4';
+    r'3d09f08403c18214300e1a1cef1962bcae42a4a4';
 
 /// Copied from Dart SDK
 class _SystemHash {
