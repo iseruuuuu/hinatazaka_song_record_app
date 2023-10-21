@@ -6,10 +6,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 class MapUtils {
   Future<Set<Marker>> createMarker(BuildContext context) async {
     final supabase = Supabase.instance.client;
-    final latData =
-        await supabase.from('place').select<String>('latitude').execute();
-    final longData =
-        await supabase.from('place').select<String>('longitude').execute();
+    final latData = await supabase.from('place').select('latitude').execute();
+    final longData = await supabase.from('place').select('longitude').execute();
 
     final locations = <LatLng>[];
 
@@ -75,7 +73,7 @@ class MapUtils {
                   Navigator.pop(context);
                   Navigator.push(
                     context,
-                    MaterialPageRoute<void>(
+                    MaterialPageRoute(
                       builder: (context) => MapDetailScreen(latitude: latitude),
                     ),
                   );
