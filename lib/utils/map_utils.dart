@@ -39,57 +39,64 @@ class MapUtils {
     return markers;
   }
 
-  Future<void> onTap(double latitude, BuildContext context) async {
+  Future<Map<String, dynamic>> fetchData(double latitude) async {
     final supabase = Supabase.instance.client;
     final result =
         await supabase.from('place').select().eq('latitude', latitude);
-    await showModalBottomSheet<void>(
-      context: context,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(25),
-        ),
-      ),
-      builder: (builder) {
-        return Container(
-          height: 250,
-          color: Colors.transparent,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Text(
-                  result[0]['place'].toString(),
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute<void>(
-                      builder: (context) => MapDetailScreen(latitude: latitude),
-                    ),
-                  );
-                },
-                child: const Text(
-                  'ライブ情報を見てみる',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ],
+    return result[0];
+  }
+
+  Future<void> onTap(double latitude, BuildContext context) async {
+    await fetchData(latitude).then((result) {
+      showModalBottomSheet<void>(
+        context: context,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(25),
           ),
-        );
-      },
-    );
+        ),
+        builder: (builder) {
+          return Container(
+            height: 250,
+            color: Colors.transparent,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text(
+                    result['place'],
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (context) =>
+                            MapDetailScreen(latitude: latitude),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    'ライブ情報を見てみる',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    });
   }
 }
