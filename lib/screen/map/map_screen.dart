@@ -9,7 +9,7 @@ class MapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder<Set<Marker>>(
-        future: MapUtils().createMarker(),
+        future: MapUtils().createMarker(context),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             if (snapshot.hasError) {
@@ -17,12 +17,7 @@ class MapScreen extends StatelessWidget {
             }
             return GoogleMap(
               markers: snapshot.data!,
-              onMapCreated: (GoogleMapController controller) {
-                late GoogleMapController mapController;
-                mapController = controller;
-              },
               initialCameraPosition: const CameraPosition(
-                // 見た目で中心あたりに設定
                 target: LatLng(39, 137.5),
                 zoom: 5,
               ),
