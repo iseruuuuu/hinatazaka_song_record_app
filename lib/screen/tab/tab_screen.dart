@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hinatazaka_song_record_app/screen/tab/tab_screen_view_model.dart';
 
 class TabScreen extends ConsumerWidget {
@@ -15,9 +16,7 @@ class TabScreen extends ConsumerWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.grey,
-        iconSize: 15,
-        selectedFontSize: 15,
-        unselectedFontSize: 15,
+        iconSize: 30,
         selectedItemColor: const Color(0xFF00CCFF),
         type: BottomNavigationBarType.fixed,
         currentIndex: state.selectedIndex,
@@ -26,32 +25,23 @@ class TabScreen extends ConsumerWidget {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.only(top: 10),
-              child: Icon(
-                Icons.music_note,
-                size: 35,
-              ),
+              child: Icon(FontAwesomeIcons.compactDisc),
             ),
-            label: '曲一覧',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.only(top: 10),
-              child: Icon(
-                Icons.map,
-                size: 35,
-              ),
+              child: Icon(FontAwesomeIcons.mapLocationDot),
             ),
-            label: 'マップ',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.only(top: 10),
-              child: Icon(
-                Icons.live_tv,
-                size: 35,
-              ),
+              child: Icon(FontAwesomeIcons.placeOfWorship),
             ),
-            label: '会場一覧',
+            label: '',
           ),
         ],
       ),
