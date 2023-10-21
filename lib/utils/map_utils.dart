@@ -75,7 +75,7 @@ class MapUtils {
                   Navigator.pop(context);
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
+                    MaterialPageRoute<void>(
                       builder: (context) => MapDetailScreen(latitude: latitude),
                     ),
                   );
