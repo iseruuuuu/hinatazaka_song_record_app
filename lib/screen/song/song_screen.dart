@@ -22,11 +22,14 @@ class SongScreenState extends ConsumerState<SongScreen>
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00CCFF),
+        backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
           '曲一覧',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
         ),
       ),
       body: state.songList.isNotEmpty

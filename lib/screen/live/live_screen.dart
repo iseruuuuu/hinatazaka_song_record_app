@@ -12,13 +12,15 @@ class LiveScreen extends ConsumerWidget {
     final stream =
         Supabase.instance.client.from('place').stream(primaryKey: ['id']);
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00CCFF),
+        backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
           'ライブ会場一覧',
           style: TextStyle(
             fontWeight: FontWeight.bold,
+            color: Colors.black,
           ),
         ),
       ),
